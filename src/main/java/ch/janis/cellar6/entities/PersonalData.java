@@ -16,7 +16,7 @@ public class PersonalData {
     @Column(name = "personID", unique = true, nullable = false)
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Id
-    private Long uuid;
+    private Long personID;
 
     @Column(name = "firstName", nullable = true)
     private String firstName;
