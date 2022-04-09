@@ -13,10 +13,10 @@ import javax.persistence.*;
 @ToString
 public class PersonalData {
 
-    @Column(name = "personID", unique = true, nullable = false)
+    @Column(name = "personId", unique = true, nullable = false)
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Id
-    private Long personID;
+    private Long personId;
 
     @Column(name = "firstName", nullable = true)
     private String firstName;
@@ -27,7 +27,7 @@ public class PersonalData {
     @Column(name = "birthday", nullable = true)
     private String birthday;
 
-    @Column(name = "telefon", nullable = true)
+    @Column(name = "telephone", nullable = true)
     private String telefon;
 
     @Column(name = "email", nullable = true)
