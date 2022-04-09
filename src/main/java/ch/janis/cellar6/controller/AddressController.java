@@ -6,9 +6,9 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-public class Address {
+public class AddressController {
     private final AddressRepository addressRepository;
-    public Address(AddressRepository addressRepository) {
+    public AddressController(AddressRepository addressRepository) {
         this.addressRepository = addressRepository;
     }
 

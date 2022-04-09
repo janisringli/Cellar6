@@ -10,9 +10,9 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/country")
-public class Country {
+public class CountryController {
     private final CountryRepository countryRepository;
-    public Country(CountryRepository countryRepository) {
+    public CountryController(CountryRepository countryRepository) {
         this.countryRepository = countryRepository;
     }
 

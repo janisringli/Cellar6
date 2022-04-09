@@ -10,10 +10,10 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/zipCode")
-public class ZipCode {
+public class ZipCodeController {
     private final ZipCodeRepository zipCodeRepository;
 
-    public ZipCode(ZipCodeRepository zipCodeRepository) {
+    public ZipCodeController(ZipCodeRepository zipCodeRepository) {
         this.zipCodeRepository = zipCodeRepository;
     }
 

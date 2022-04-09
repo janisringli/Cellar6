@@ -6,10 +6,10 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-public class City {
+public class CityController {
     private final CityRepository cityRepository;
 
-    public City(CityRepository cityRepository) {
+    public CityController(CityRepository cityRepository) {
         this.cityRepository = cityRepository;
     }
 
