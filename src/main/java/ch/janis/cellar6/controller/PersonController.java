@@ -17,7 +17,6 @@ public class PersonController {
 
     @GetMapping
     List<Person> getPersonalData() {
-        System.out.println("is this the right repo?");
         return personalDataRepository.findAll();
     }
 
