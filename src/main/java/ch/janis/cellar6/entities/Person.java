@@ -11,7 +11,7 @@ import javax.persistence.*;
 @Setter
 @Table(name="PersonalData")
 @ToString
-public class PersonalData {
+public class Person {
 
     @Column(name = "personId", unique = true, nullable = false)
     @GeneratedValue(strategy = GenerationType.AUTO)

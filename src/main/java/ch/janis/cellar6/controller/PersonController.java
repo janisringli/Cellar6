@@ -1,27 +1,28 @@
 package ch.janis.cellar6.controller;
 
-import ch.janis.cellar6.repositories.PersonalDataRepository;
+import ch.janis.cellar6.entities.Person;
+import ch.janis.cellar6.repositories.PersonRepository;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
 @CrossOrigin
-@RequestMapping("/personalData")
-public class PersonalDataController {
-    private final PersonalDataRepository personalDataRepository;
-    public PersonalDataController(PersonalDataRepository personalDataRepository) {
+@RequestMapping("/person")
+public class PersonController {
+    private final PersonRepository personalDataRepository;
+    public PersonController(PersonRepository personalDataRepository) {
         this.personalDataRepository = personalDataRepository;
     }
 
     @GetMapping
-    List<ch.janis.cellar6.entities.PersonalData> getPersonalData() {
+    List<Person> getPersonalData() {
         System.out.println("is this the right repo?");
         return personalDataRepository.findAll();
     }
 
     @PostMapping
-    ch.janis.cellar6.entities.PersonalData createTest(@RequestBody ch.janis.cellar6.entities.PersonalData test) {
+    Person createTest(@RequestBody Person test) {
         return personalDataRepository.save(test);
     }
 
