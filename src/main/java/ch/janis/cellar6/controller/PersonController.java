@@ -10,19 +10,19 @@ import java.util.List;
 @CrossOrigin
 @RequestMapping("/person")
 public class PersonController {
-    private final PersonRepository personalDataRepository;
-    public PersonController(PersonRepository personalDataRepository) {
-        this.personalDataRepository = personalDataRepository;
+    private final PersonRepository personRepository;
+    public PersonController(PersonRepository personRepository) {
+        this.personRepository = personRepository;
     }
 
     @GetMapping
-    List<Person> getPersonalData() {
-        return personalDataRepository.findAll();
+    List<Person> getPerson() {
+        return personRepository.findAll();
     }
 
     @PostMapping
     Person createTest(@RequestBody Person test) {
-        return personalDataRepository.save(test);
+        return personRepository.save(test);
     }
 
 }
