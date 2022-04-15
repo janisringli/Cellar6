@@ -3,8 +3,11 @@ package ch.janis.cellar6.entities;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
+import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
+import java.util.UUID;
+
 
 @Entity
 @Getter
@@ -14,9 +17,12 @@ import javax.persistence.*;
 public class Allergy {
 
     @Column(name = "allergyId", unique = true, nullable = false)
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GenericGenerator(
+            name = "UUID",
+            strategy = "org.hibernate.id.UUIDGenerator"
+    )
     @Id
-    private Long allergyId;
+    private UUID allergyId;
 
     @Column(name = "allergyName", nullable = true)
     private String illnessName;
