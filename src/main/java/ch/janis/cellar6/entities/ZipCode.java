@@ -16,13 +16,13 @@ import java.util.UUID;
 @ToString
 public class ZipCode {
 
-    @Column(name = "zipCodeID", unique = true, nullable = false)
+    @Column(name = "zipCodeId", unique = true, nullable = false)
     @GenericGenerator(
             name = "UUID",
             strategy = "org.hibernate.id.UUIDGenerator"
     )
     @Id
-    private UUID addressId;
+    private UUID zipCodeId;
 
     @Column(name = "cityIDFS", nullable = true)
     private UUID cityIdfs;
